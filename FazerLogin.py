@@ -10,18 +10,18 @@ from selenium.webdriver.common.keys import Keys
 
 while (True):
     navegador= webdriver.Chrome()
-    navegador.get("https://www.facebook.com/")
+    navegador.get("INSIRA O LINK DO SITE EX: https://www.facebook.com/")
     
 
     time.sleep(8) #Tempo para acessar a Página
     
     #Procurar o id ou então a classificação do login e da senha
-    usuario = navegador.find_element_by_name("email")
-    senha = navegador.find_element_by_name("pass")
+    usuario = navegador.find_element_by_name("INSIRA O NAME DO CAMPO")
+    senha = navegador.find_element_by_name("INSIRA O NAME DO CAMPO")
 
     #Preencher o campo de login/senha
-    usuario.send_keys("henrique_estrelas@hotmail.com")
-    senha.send_keys("hen456987")
+    usuario.send_keys("INSIRA O SEU USURÁRIO")
+    senha.send_keys("INSIRA A SUA SENHA")
     
     time.sleep(8)#Tempo para carregar a Página
    
