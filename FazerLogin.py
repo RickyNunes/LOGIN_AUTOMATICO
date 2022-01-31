@@ -14,7 +14,7 @@ def AcessarSite():
     
         #navegador= webdriver.Chrome()
         
-        navegador.get("https://app.pontomaisweb.com.br/#/acessar")
+        navegador.get("https://facebook.com/")
         time.sleep(8)
         return navegador
     
@@ -24,21 +24,17 @@ def AcessarSite():
 def Login(navegador):
     usuario = navegador.find_element_by_name("login")   #Procurar o id ou então a classificação do login e da senha
     senha = navegador.find_element_by_name("password")
-    usuario.send_keys("50691152861")
-    senha.send_keys("Sup#R1CKY041620")
+    usuario.send_keys("SEU LOGIN")
+    senha.send_keys("SUA SENHA")
     time.sleep(3)
 
                         #Localizar o botão de enviar e executar
     
-def RegistrarPonto(navegador):
+def Entrar(navegador):
     logar= navegador.find_element_by_xpath("//*[@type='submit']")
     logar.submit()
-    time.sleep(15)
-    log= navegador.find_element_by_css_selector("i.mr4.icon-pontomais-clock-in-out").click()
-    time.sleep(8)
 
-
-                        #fechar o brownser
+                       #fechar o brownser
     
 def FecharBrowser(navegador):   
     navegador.close()
@@ -46,7 +42,7 @@ def FecharBrowser(navegador):
 
 Navevagor= AcessarSite()
 Login(Navevagor)
-RegistrarPonto(Navevagor)
+Entrar(Navevagor)
 FecharBrowser(Navevagor)
     
     
